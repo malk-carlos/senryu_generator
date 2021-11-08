@@ -1,1 +1,0 @@
-# senryu_generator
