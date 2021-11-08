@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+}
+
+#title{
+    margin: 30px 20px 15px 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#select{
+    font-size: 30px;
+}
+
+#result{
+    margin: 100px auto 10px;
+    font-size: 35px;
+    writing-mode: vertical-rl;
+}
+
+#kami{
+
+}
+
+#a{
+
+}
+
+#b{
+    margin-top: 30px;
+}
+
+#c{
+    margin-top: 60px;
+}
+
+#simo{
+    display: none;
+}
+
+.simo_1{
+    margin-right: 30px;
+    margin-top: 50px;
+}
+
+.simo_2{
+    margin-top: 80px;
+}
+
+#button{
+    text-align: center;
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#enter{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
