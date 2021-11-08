@@ -1,21 +1,13 @@
 function sentan(){
     // 5を選択（ランダム）
-    var kamigo = kamigolist();
-    var kamigo_len = kamigo.length;
-    var ransuuA = Math.floor(Math.random() * kamigo_len);
-    document.getElementById("a").innerHTML = kamigo[ransuuA];
+    kamigo();
 
     // 7を選択（ランダム）
-    var shichi = shichilist();
-    var shichi_len = shichi.length;
-    var ransuuB = Math.floor(Math.random() * shichi_len);
-    document.getElementById("b").innerHTML = shichi[ransuuB];
+    shichi();
 
     // 5を選択（ランダム）
-    var shimogo = shimogolist();
-    var shimogo_len = shimogo.length;
-    var ransuuC = Math.floor(Math.random() * shimogo_len);
-    document.getElementById("c").innerHTML = shimogo[ransuuC];
+    shimogo();
+
     // ランダム部分をデータ配列から選ばれるように（単語としての体をなすため）
 
     // ランダムに下の句を変更する
@@ -27,6 +19,30 @@ function sentan(){
         $("#akohusi").css("display","none");
         $("#salad").css("display","unset");
     }
+}
+
+// 上の5を選択（ランダム）
+function kamigo(){
+    var kamigo = kamigolist();
+    var kamigo_len = kamigo.length;
+    var ransuuA = Math.floor(Math.random() * kamigo_len);
+    document.getElementById("a").innerHTML = kamigo[ransuuA];
+}
+
+// 7を選択（ランダム）
+function shichi(){
+    var shichi = shichilist();
+    var shichi_len = shichi.length;
+    var ransuuB = Math.floor(Math.random() * shichi_len);
+    document.getElementById("b").innerHTML = shichi[ransuuB];
+}
+
+// 下の5を選択（ランダム）
+function shimogo(){
+    var shimogo = shimogolist();
+    var shimogo_len = shimogo.length;
+    var ransuuC = Math.floor(Math.random() * shimogo_len);
+    document.getElementById("c").innerHTML = shimogo[ransuuC];
 }
 
 function simo(){

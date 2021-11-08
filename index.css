@@ -18,13 +18,13 @@
     writing-mode: vertical-rl;
 }
 
-#kami{
+/* #kami{
 
 }
 
 #a{
 
-}
+} */
 
 #b{
     margin-top: 30px;
@@ -50,9 +50,17 @@
 #button{
     text-align: center;
     position: absolute;
-    bottom: 150px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    margin: 10px 10px;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
 #enter{
