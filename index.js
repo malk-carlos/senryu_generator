@@ -1,12 +1,40 @@
+function downloadDatas(){
+    const API_URL = 'https://script.googleapis.com/v1/scripts/AKfycbxDMmZuv3I3L7Qroi-eQ2FUC-MaRhFhgOikc3c10pexbg1d7L5w0GYoI7F-r-90XFmi:run'
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', API_URL, true);
+    xhr.setRequestHeader('Access-Control-Allow-Origin', 'http://192.168.11.13:5500');  // クライアント側でCORSヘッダーを設定
+    xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        var responseData = JSON.parse(xhr.responseText);  // レスポンスデータを解析
+    // レスポンスデータを使用するコード
+    console.log(responseData.message);
+    }
+    };
+    xhr.send();
+}
+
+function shoku(){
+
+}
+
+function niku(){
+
+}
+
+function kekku(){
+
+}
+
+
 function sentan(){
     // 5を選択（ランダム）
-    kamigo();
+    shoku();
 
     // 7を選択（ランダム）
-    shichi();
+    niku();
 
     // 5を選択（ランダム）
-    shimogo();
+    kekku();
 
     // ランダム部分をデータ配列から選ばれるように（単語としての体をなすため）
 
@@ -21,59 +49,26 @@ function sentan(){
     }
 }
 
-// 上の5を選択（ランダム）
-function kamigo(){
-    var kamigo = kamigolist();
-    var kamigo_len = kamigo.length;
-    var ransuuA = Math.floor(Math.random() * kamigo_len);
-    document.getElementById("a").innerHTML = kamigo[ransuuA];
-}
+// // 上の5を選択（ランダム）
+// function kamigo(){
+//     var kamigo = kamigolist();
+//     var kamigo_len = kamigo.length;
+//     var ransuuA = Math.floor(Math.random() * kamigo_len);
+//     document.getElementById("a").innerHTML = kamigo[ransuuA];
+// }
 
-// 7を選択（ランダム）
-function shichi(){
-    var shichi = shichilist();
-    var shichi_len = shichi.length;
-    var ransuuB = Math.floor(Math.random() * shichi_len);
-    document.getElementById("b").innerHTML = shichi[ransuuB];
-}
+// // 7を選択（ランダム）
+// function shichi(){
+//     var shichi = shichilist();
+//     var shichi_len = shichi.length;
+//     var ransuuB = Math.floor(Math.random() * shichi_len);
+//     document.getElementById("b").innerHTML = shichi[ransuuB];
+// }
 
-// 下の5を選択（ランダム）
-function shimogo(){
-    var shimogo = shimogolist();
-    var shimogo_len = shimogo.length;
-    var ransuuC = Math.floor(Math.random() * shimogo_len);
-    document.getElementById("c").innerHTML = shimogo[ransuuC];
-}
-
-function simo(){
-    // 下の句 を表示/非表示（選択を切り替えた時）
-    var sel = document.getElementById("select").value;
-
-    if( sel === "tan" ){
-        $("#simo").css("display","unset");
-        // $("#akohusi").css("display","none");
-        var ransuuS2 = Math.floor(Math.random() * 2);
-        if(ransuuS2 === 0){
-            $("#salad").css("display","none");
-            $("#akohusi").css("display","unset");
-        } else if(ransuuS2 === 1){
-            $("#akohusi").css("display","none");
-            $("#salad").css("display","unset");
-        }
-    } else if ( sel === "sen" ){
-        $("#simo").css("display","none");
-    }
-}
-
-
-// function up(){
-//     var file = filelist(); //data.jsの関数を呼び出す
-//     var fileno = file.length;
-//     var sosu = ''; //ここで初期化しておかないと連結時に'undefined'が先頭に表示されてしまう
-//     for(i=0;i<fileno;i++){
-//     //var sosu = sosu +'<label><input type=radio name=mus onClick="func1(this)" onkeypress="func1(this)" value="'+ file[i] +'">'+ file[i] +'</label><br>';
-//     //html要素の属性はダブルコーテーションでくくる、終了タグのスラッシュはエスケープしておく
-//     sosu = sosu +'<label><input type="radio" name="mus" onClick="func1(this)" onkeypress="func1(this)" value="'+ file[i] +'">'+ file[i] +'<\/label><br>';
-//     }
-//     document.getElementById('hyouji').innerHTML = sosu;
-//     }
+// // 下の5を選択（ランダム）
+// function shimogo(){
+//     var shimogo = shimogolist();
+//     var shimogo_len = shimogo.length;
+//     var ransuuC = Math.floor(Math.random() * shimogo_len);
+//     document.getElementById("c").innerHTML = shimogo[ransuuC];
+// }

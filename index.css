@@ -18,13 +18,6 @@
     writing-mode: vertical-rl;
 }
 
-/* #kami{
-
-}
-
-#a{
-
-} */
 
 #b{
     margin-top: 30px;
@@ -32,19 +25,6 @@
 
 #c{
     margin-top: 60px;
-}
-
-#simo{
-    display: none;
-}
-
-.simo_1{
-    margin-right: 30px;
-    margin-top: 50px;
-}
-
-.simo_2{
-    margin-top: 80px;
 }
 
 #button{
@@ -61,6 +41,10 @@ button{
     margin: 10px 10px;
     font-size: 20px;
     border-radius: 10px;
+}
+
+#change_btns {
+    display: flex;
 }
 
 #enter{

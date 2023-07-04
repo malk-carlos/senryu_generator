@@ -8,38 +8,23 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="index.js"></script>
-    <title>川柳短歌ジェネレータ</title>
+    <title>みんなの川柳ジェネレータ</title>
 </head>
-<body>
-    <div id="title">
-        <select name="select" id="select" onchange="simo()">
-            <option value="sen">川柳</option>
-            <option value="tan">短歌</option>
-        </select>
-        <span class="gen">をジェネレートする</span>
-    </div>
+<body onload="downloadDatas()">
     <div id="result">
         <div id="kami">
             <p id="a">古池や</p>
             <p id="b">蛙飛び込む</p>
             <p id="c">水の音</p>
         </div>
-        <div id="simo">
-            <div id="akohusi">
-                <p id="ako" class="simo_1">あんたはここで</p>
-                <p id="husi" class="simo_2">ふゆと死ぬのよ</p>
-            </div>
-            <div id="salad">
-                <p id="jul6" class="simo_1">七月六日は</p>
-                <p id="anniv" class="simo_2">サラダ記念日</p>
-            </div>
-        </div>
     </div>
     <div id="button">
-        <button id="shimogo_change" onclick="shimogo()">チェンジ！</button>
-        <button id="shichi_change" onclick="shichi()">チェンジ！</button>
-        <button id="kamigo_change" onclick="kamigo()">チェンジ！</button>
-        <br><button id="enter" onclick="sentan()">ジェネレート！！</button>
+        <div id="change_btns">
+            <button id="shimogo_change" onclick="shoku()">チェンジ！</button>
+            <button id="shichi_change" onclick="niku()">チェンジ！</button>
+            <button id="kamigo_change" onclick="kekku()">チェンジ！</button>
+        </div>
+        <button id="enter" onclick="sentan()">ジェネレート！！</button>
     </div>
 </body>
 </html>
